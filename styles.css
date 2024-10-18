@@ -36,3 +36,13 @@
     margin-top: 15px;          /* Space above notes */
 }
 
+img {
+    width: 200px;           /* Set the desired width for the image */
+    height: auto;           /* Maintain aspect ratio */
+    margin-right: 100px;     /* Space between image and heading */
+}
+
+.header-container {
+    display: flex;           /* Use flexbox for layout */
+    align-items: center;     /* Center items vertically */
+}
