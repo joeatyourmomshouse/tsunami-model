@@ -1,0 +1,38 @@
+/* General Styles for Data Blocks */
+.data-block {
+    background-color: #f9f9f9;  /* Light gray background */
+    border: 2px solid #1E90FF;  /* Blue border */
+    border-radius: 8px;         /* Rounded corners */
+    padding: 20px;              /* Inner spacing */
+    margin: 20px 0;            /* Spacing between blocks */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Title Style */
+.data-block h2 {
+    font-size: 22px;            /* Title font size */
+    color: #1E90FF;             /* Blue color for the title */
+    margin-bottom: 10px;        /* Space below title */
+}
+
+/* Paragraph Style */
+.data-block p {
+    font-size: 16px;            /* Regular text size */
+    color: #333;                /* Dark gray color */
+    line-height: 1.5;           /* Line spacing */
+}
+
+/* List Style */
+.data-block ul, .data-block ol {
+    margin: 10px 0;            /* Vertical spacing */
+    padding-left: 20px;        /* Indentation for lists */
+}
+
+/* Highlighted Note Style */
+.note {
+    background-color: #ffeb3b; /* Yellow background for notes */
+    padding: 10px;             /* Inner spacing */
+    border-radius: 5px;        /* Rounded corners */
+    margin-top: 15px;          /* Space above notes */
+}
+
