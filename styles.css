@@ -1,6 +1,6 @@
 /* General Styles for Data Blocks */
 .data-block {
-    background-color: #f9f9f9;  /* Light gray background */
+    background-color: hsl(107, 22%, 84%);  /* Light gray background */
     border: 2px solid #1E90FF;  /* Blue border */
     border-radius: 8px;         /* Rounded corners */
     padding: 20px;              /* Inner spacing */
@@ -30,7 +30,7 @@
 
 /* Highlighted Note Style */
 .note {
-    background-color: #ffeb3b; /* Yellow background for notes */
+    background-color: lightgreen; /* Yellow background for notes */
     padding: 10px;             /* Inner spacing */
     border-radius: 5px;        /* Rounded corners */
     margin-top: 15px;          /* Space above notes */
@@ -46,6 +46,7 @@ img {
     display: flex;           /* Use flexbox for layout */
     align-items: center;     /* Center items vertically */
 }
-#body {
-    
+
+body {
+    background-color: #4285f4ff; /* Light gray background */
 }
