@@ -3,43 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tsunami Education Tool</title>
-    <link rel="stylesheet" href="styles1.css">
+    <title>Tsunami Challenge</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Learn About Tsunamis</h1>
-        <section class="info">
-            <h2>What is a Tsunami?</h2>
-            <p>A tsunami is a series of large ocean waves caused by disturbances such as earthquakes, volcanic eruptions, or underwater landslides.</p>
-            <h2>Causes</h2>
-            <ul>
-                <li>Earthquakes</li>
-                <li>Volcanic eruptions</li>
-                <li>Landslides</li>
-                <li>Glacier calving</li>
-            </ul>
-        </section>
-        
-        <section class="simulation">
-            <h2>Tsunami Simulation</h2>
-            <label for="magnitude">Earthquake Magnitude (1-9):</label>
-            <input type="range" id="magnitude" min="1" max="9" value="5">
-            <span id="magnitude-value">5</span>
-
-            <label for="depth">Depth (km):</label>
-            <input type="range" id="depth" min="1" max="30" value="10">
-            <span id="depth-value">10</span>
-
-            <button id="simulate">Simulate Tsunami</button>
-
-            <div class="wave-container">
-                <div class="wave" id="wave"></div>
-            </div>
-            <div id="result"></div>
-        </section>
+        <h1>Tsunami Challenge Quiz</h1>
+        <div id="quiz-container">
+            <div id="question"></div>
+            <div id="answers"></div>
+            <button id="next-button" class="hidden">Next Question</button>
+        </div>
+        <div id="score-container" class="hidden">
+            <h2>Your Score: <span id="score"></span></h2>
+            <button id="restart-button">Restart</button>
+        </div>
     </div>
-    
-    <script src="script1.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
