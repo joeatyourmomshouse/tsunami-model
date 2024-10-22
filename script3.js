@@ -24,22 +24,23 @@ camera.lookAt(0, 0, 0);
 
 // Animation variables
 let time = 0;
+let simulationRunning = false;
 
 function animate() {
-    requestAnimationFrame(animate);
-
-    // Create wave effect
-    time += 0.1;
-    const position = ocean.geometry.attributes.position;
-    for (let i = 0; i < position.count; i++) {
-        const x = position.getX(i);
-        const z = position.getZ(i);
-        const waveHeight = Math.sin((x + time) * 0.5) * Math.cos((z + time) * 0.5);
-        position.setY(i, waveHeight);
+    if (simulationRunning) {
+        time += 0.1;
+        const position = ocean.geometry.attributes.position;
+        for (let i = 0; i < position.count; i++) {
+            const x = position.getX(i);
+            const z = position.getZ(i);
+            const waveHeight = Math.sin((x + time) * 0.5) * Math.cos((z + time) * 0.5);
+            position.setY(i, waveHeight);
+        }
+        position.needsUpdate = true;
     }
-    position.needsUpdate = true;
 
     renderer.render(scene, camera);
+    requestAnimationFrame(animate);
 }
 
 animate();
@@ -50,3 +51,19 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
+// Play button functionality
+document.getElementById('play-button').addEventListener('click', () => {
+    simulationRunning = true;
+    document.getElementById('overlay').style.display = 'none';
+    displayTsunamiInfo();
+});
+
+// Educational text overlay
+function displayTsunamiInfo() {
+    const infoText = `
+        Tsunamis are large ocean waves caused by underwater disturbances such as earthquakes or volcanic eruptions.
+        As the wave approaches the shore, it can grow in height and cause significant damage.
+    `;
+    document.getElementById('info').innerHTML = infoText;
+}
